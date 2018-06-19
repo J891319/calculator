@@ -70,3 +70,52 @@ function updateScreen(key) {
 		input.value += key;
 	}
 };
+
+window.onkeypress = function(event) {
+	console.log(event.code);
+	if (event.code == "Digit1") {
+		btn1.click();
+	}
+	else if (event.code == "Digit2") {
+		btn2.click();
+	}
+	else if (event.code == "Digit3") {
+		btn3.click();
+	}
+	else if (event.code == "Digit4") {
+		btn4.click();
+	}
+	else if (event.code == "Digit5") {
+		btn5.click();
+	}
+	else if (event.code == "Digit6") {
+		btn6.click();
+	}
+	else if (event.code == "Digit7") {
+		btn7.click();
+	}
+	else if (event.code == "Digit8") {
+		btn8.click();
+	}
+	else if (event.code == "Digit9") {
+		btn9.click();
+	}
+	else if (event.code == "Digit0") {
+		btn0.click();
+	}
+	else if (event.code == "Enter") {
+		equal.click();
+	}
+	else if (event.code == "Equal") {
+		pls.click();
+	}
+	else if (event.code == "Slash") {
+		divi.click();
+	}
+	else if (event.code == "Minus") {
+		min.click();
+	}
+	else if (event.code == "Escape") {
+		cls.click();
+	}
+}
