@@ -1,4 +1,8 @@
+//used for equal button
+
 var check = false;
+
+//numbers
 
 btn1.onclick = function() {
 	updateScreen(1);
@@ -40,6 +44,16 @@ btn0.onclick = function() {
 	updateScreen(0);
 };
 
+//operations
+
+mod.onclick = function() {
+	input.value = input.value + "%";
+};
+
+multi.onclick = function() {
+	input.value = input.value + "*";
+};
+
 min.onclick = function() {
 	input.value = input.value + "-";
 };
@@ -52,6 +66,8 @@ pls.onclick = function() {
 	input.value = input.value + "+";
 };
 
+//other buttons
+
 cls.onclick = function() {
 	input.value = null;
 };
@@ -62,6 +78,8 @@ equal.onclick = function() {
 	check = true;
 };
 
+//makes the equal button clear the screen
+
 function updateScreen(key) {
 	if (check == true) {
 		input.value = key;
@@ -70,6 +88,8 @@ function updateScreen(key) {
 		input.value += key;
 	}
 };
+
+//allows for keyboard input
 
 window.onkeypress = function(event) {
 	console.log(event.code);
@@ -115,7 +135,7 @@ window.onkeypress = function(event) {
 	else if (event.code == "Minus") {
 		min.click();
 	}
-	else if (event.code == "Escape") {
+	else if (event.code == "Backspace") {
 		cls.click();
 	}
-}
+};
